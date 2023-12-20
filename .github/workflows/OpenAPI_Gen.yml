@@ -1,9 +1,10 @@
 name: Generate Code from OpenAPI
 
 on:
-  release:
-    types: [published]
-
+  schedule:
+    // Every Monday at 1PM UTC (9AM EST)
+    0 13 * * 1
+    
 jobs:
   generate_code:
     runs-on: ubuntu-latest
